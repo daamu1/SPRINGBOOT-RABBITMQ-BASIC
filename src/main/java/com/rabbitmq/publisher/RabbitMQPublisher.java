@@ -19,7 +19,7 @@ public class RabbitMQPublisher {
     private RabbitTemplate rabbitTemplate;
 
     public void sendMessage(String message) {
-        LOGGER.info("Message Send -> s%" + message);
+        LOGGER.info("Message Send -------------> " + message);
         rabbitTemplate.convertAndSend(exchangeName, routingKey, message);
     }
 }
